@@ -102,3 +102,33 @@ header h4{
     border-radius: 10px;
     margin: 15px 0;
 }
+
+#changeTheme {
+    background-color: #268bd2;
+    color: #eee8d5;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+}
+
+body.light {
+    background-color: #eee8d5;
+    color: #002b36;
+}
+
+body.light a {
+    color: #268bd2;
+}
+
+body.light .education-entry,
+body.light .experience-entry {
+    background-color: #d8d3c4;
+}
+
+body.light #changeTheme {
+    background-color: #002b36;
+    color: #eee8d5;
+}
