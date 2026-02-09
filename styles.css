@@ -38,6 +38,10 @@ header h4{
     padding: 0 16px;
 }
 
+.container #bio{
+    line-height: 1.5;
+}
+
 .pfp{
     width: 100%;
     max-width: 300px;
@@ -104,8 +108,8 @@ header h4{
 }
 
 #changeTheme {
-    background-color: #268bd2;
-    color: #eee8d5;
+    color: #002b36;
+    background-color: #eee8d5;
     border: none;
     border-radius: 10px;
     cursor: pointer;
