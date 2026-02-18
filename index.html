@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guteraa Ayana - Computer Science and Applied Mathematics student at Emory University specializing in software development and data science.">
     <title>ayana-resume</title>
 </head>
 <body>
     <button id="changeTheme"> Change Theme </button>
 
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <header> 
-        <h1>Guteraa Zelalem Ayana</h1>
-        <h3 id="greeting"></h3>
+        <h2 id="greeting"></h2>
+        <h2>Guteraa (goo-terra) Ayana</h2>
+        <p>CS & Applied Math Student | Data Science + Software Development Enthusiast</p>
     </header>
 
-
     <main class="container">
-        <img class="pfp" src="profile_picture.JPG" alt = "A headshot of me" width="500">
-        <div class="links">
-            <a href="https://www.linkedin.com/in/guteraa/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
-            <a href="mailto:gayana@emory.edu">Send an email</a>
-        </div>
 
-        <p id="bio">  My name is Guteraa Ayana and I am a student at Emory University studying Computer Science and Applied Mathematics. 
-            My passion for computers and programming as a whole started when my dad introducted me Khan Academy. 
-            While he expected me to be working on my math, reading, and science topics, I was alway in the programming section whittling away at the vast array of videos. 
-            Fast-foward ten years and now I'm in university studying the same topic I was obsessed with all those years ago. If you don't find me on my bed, laptop on my chest, 
-            refining my skills you will probably find me at my desktop playing Modded Minecraft discovering new ways to make the most mundane task as quick as possible, each second at a time. 
-            If not using device of some sort, I might be outside biking...or shoveling snow depending on the season!
-        </p>
+        <section id="about">
+            <img class = "pfp" src="profile_picture.JPG" alt="A headshot of me" width="500">
+            <p> My name is Guteraa Ayana and I am a student at Emory University studying Computer Science and Applied Mathematics. </p>
 
-        <h2> EDUCATION</h2>
-        <section class="education"> 
+            <p>My passion for computers and programming as a whole started when my dad introduced me to Khan Academy. While he expected me to be working on my math, reading, and science topics, I was always in the programming section whittling away at the vast array of videos.</p>
+
+            <p>Fast-forward ten years and now I'm in university studying the same topic I was obsessed with all those years ago. If you don't find me on my bed, laptop on my chest, refining my skills you will probably find me at my desktop playing Modded Minecraft discovering new ways to make the most mundane task as quick as possible, each second at a time. If not using device of some sort, I might be outside biking...or shoveling snow depending on the season!</p> 
+        </section>
+
+        <section id="education"> 
+            <h2> EDUCATION</h2>
             <article class="education-entry">
                 <div class="education-item">
                     <span><strong>Emory University</strong> - Atlanta, Georgia</span>
@@ -92,9 +101,8 @@
             </article>
         </section>
 
-        <h2>EXPERIENCE</h2>
-
-        <section class="experience">
+        <section id="experience">
+            <h2>EXPERIENCE</h2>
             <p>I have spent a lot of time outside of school dedicated to various activities. Some in specific were paid/more professional activities.</p>
 
             <article class="experience-entry">
@@ -102,14 +110,11 @@
                     <span><strong>Northeastern University</strong> - Research Assistant Intern</span>
                     <span><strong>May 2025 - Oct 2025</strong></span>
                 </div>
-
                 <ul>
-                    <li>Conduct research using statistical computing for regression-based sports analysis</li>
-                    <li>Analyze trends and tactics programmatically using various Python libraries (Matplotlib, Pandas, Numpy) and SLURM</li>
-                    <li>Data consisted of 21 unique competitions (leagues) at varying professional levels</li>
-                    <li>Research paper pre-print surrounding goal-scoring patterns over time located
-                        <a href=" https://arxiv.org/abs/2501.18606">here</a>
-                    </li>
+                    <li>Conducted advanced statistical research in soccer analytics, focusing on performance trends, tactical insights, and predictive regression modeling</li>
+                    <li>Built reproducible data pipelines using Python and SLURM for large-scale analysis, and applied libraries such as Pandas, NumPy, and Matplotlib for data processing and visualization</li>
+                    <li>Version-controlled all code with Git and communicated findings through polished visual summaries</li>
+                    <li>Results contributed to a publishable research <a href="https://arxiv.org/abs/2501.18606">paper</a> on actionable analytic methodologies in sport performance</li>
                 </ul>
             </article>
 
@@ -165,20 +170,65 @@
             
         </section>
 
-        <h2> SKILLS</h2>
-
-        <section class="skills">
-            <article class="skill-entry">
-                <div class="skill-info">
-                    <span><strong>Technical:</strong> Python • Java • R • Web Development • Git</span>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Soccer Analytics Research: Goal-Scoring Pattern Analysis</h3>
+                <p><strong>Problem:</strong> Analyzed goal-scoring patterns across 21 professional soccer leagues to identify temporal trends and tactical shifts in the sport.</p>
+                
+                <p><strong>Solution:</strong> Built a regression-based statistical model using Python to process and analyze thousands of matches. Created automated data pipelines with SLURM for large-scale computation and generated visualizations revealing significant patterns in goal timing and frequency.</p>
+                
+                <p><strong>Key Findings:</strong> Discovered that goal-scoring probability increases as matches progress, with significantly fewer goals than expected in the early minutes of each half (χ² ≈ 288.62, p = 3.72 × 10⁻²¹). Identified "bursty" goal-scoring behavior where teams are more likely to score consecutive goals shortly after their previous goal, revealing temporal clustering patterns that deviate from random expectation. Analysis of 3,433 matches across 21 leagues demonstrates that goal timing is context-dependent, influenced by factors like fatigue, tactical shifts, and psychological momentum.</p>
+                
+                <p><strong>Technologies:</strong> Python (Pandas, NumPy, Matplotlib), SLURM, Git, Statistical Regression Modeling</p>
+                
+                <p><strong>Impact:</strong> Research published as a pre-print on arXiv, demonstrating reproducible methodology for sports performance analysis.</p>
+                
+                <div class="project-links">
+                    <a href="https://arxiv.org/abs/2501.18606" target="_blank">Read the Paper</a>
                 </div>
+            </div>
+        </section>
 
-                <div class="skill-info">
-                    <span><strong>Interpersonal:</strong> Leadership • Communication • Fortitude</span>  
+        <section id="skills">
+            <h2>SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skill-column">
+                    <h3>Technical</h3>
+                    <ul>
+                        <li>Python (Pandas, NumPy, Matplotlib)</li>
+                        <li>Java</li>
+                        <li>R & Statistical Modeling</li>
+                        <li>Web Development (HTML, CSS, JavaScript)</li>
+                        <li>Git & Version Control</li>
+                        <li>SLURM for Large-Scale Computing</li>
+                    </ul>
                 </div>
-            </article>
+                
+                <div class="skill-column">
+                    <h3>Interpersonal</h3>
+                    <ul>
+                        <li>Leadership & Team Management</li>
+                        <li>Clear Communication</li>
+                        <li>Mentorship & Tutoring</li>
+                        <li>Problem Solving</li>
+                        <li>Collaboration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>CONTACT</h2>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/guteraa/" target="_blank">LinkedIn</a>
+                <a href="Ayana_Guteraa_Resume.pdf" download>Download Resume</a>
+                <a href="mailto:guteraa.ayana@gmail.com">Email Me</a>
+            </div>
         </section>
     </main>
-    <script src="./index.js"></script>
+    <footer>
+        © 2025 Guteraa Ayana | Last Updated: February 2025
+    </footer>
 </body>
 </html>
